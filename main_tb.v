@@ -10,7 +10,7 @@ module digital_clock_tb;
     reg [7:0] input_sec;
     reg [7:0] input_min;
     reg [7:0] input_hour;
-    reg AM_PM;
+    reg hour_format;
 
     // Date control signals
     reg set_date;
@@ -26,6 +26,7 @@ module digital_clock_tb;
     reg [7:0] timer_input_sec;
 
     // Alarm control signals
+    reg set_alarm;
     reg [7:0] alarm_time_sec;
     reg [7:0] alarm_time_min;
     reg [7:0] alarm_time_hour;
@@ -48,10 +49,10 @@ module digital_clock_tb;
     wire [7:0] timer_min;
     wire [7:0] timer_sec;
     wire timer_running;
-    wire timer_done;
+    wire timer_buzzer;
 
     // Alarm outputs
-    wire alarm_sound;
+    wire alarm_buzzer;
 
     // Display variables for monitoring
     reg [7:0] display_seconds;
@@ -61,64 +62,42 @@ module digital_clock_tb;
     // Indicator to display am or pm on the screen
     reg [15:0] am_pm_indicator;
 
-    // Instantiate the clock_handler module
-    clock_handler clock_module (
+    // Instantiating the main driver for the clock
+    main_driver dut (
         .clk(clk),
-        .AM_PM(AM_PM),
+        .reset(reset),
+        .hour_format(hour_format),
         .set_time(set_time),
+        .set_date(set_date),
+        .set_alarm(set_alarm),
+        .set_timer(set_timer),
+        .start_timer(start_timer),
+        .stop_timer(stop_timer),
         .input_sec(input_sec),
         .input_min(input_min),
         .input_hour(input_hour),
+        .input_day(input_day),
+        .input_month(input_month),
+        .input_year(input_year),
+        .timer_input_min(timer_input_min),
+        .timer_input_sec(timer_input_sec),
+        .alarm_time_sec(alarm_time_sec),
+        .alarm_time_min(alarm_time_min),
+        .alarm_time_hour(alarm_time_hour),
         .current_24_sec(current_24_sec),
         .current_24_min(current_24_min),
         .current_24_hour(current_24_hour),
         .display_sec(display_sec),
         .display_min(display_min),
         .display_hour(display_hour),
-        .is_pm(is_pm)
-    );
-
-    // Instantiate the date_handler module
-    date_handler date_module (
-        .clk(clk),
-        .reset(reset),
-        .set_date(set_date),
-        .input_day(input_day),
-        .input_month(input_month),
-        .input_year(input_year),
-        .current_24_hour(current_24_hour),
-        .current_24_min(current_24_min),
-        .current_24_sec(current_24_sec),
         .current_day(current_day),
         .current_month(current_month),
-        .current_year(current_year)
-    );
-
-    // Instantiate the timer_handler module
-    timer_handler timer_module (
-        .clk(clk),
-        .reset(reset),
-        .set_timer(set_timer),
-        .start_timer(start_timer),
-        .stop_timer(stop_timer),
-        .input_min(timer_input_min),
-        .input_sec(timer_input_sec),
+        .current_year(current_year),
         .timer_min(timer_min),
         .timer_sec(timer_sec),
         .timer_running(timer_running),
-        .timer_done(timer_done)
-    );
-
-    // Instantiate the alarm_handler module
-    alarm_handler alarm_module (
-        .clk(clk),
-        .input_sec(current_24_sec),
-        .input_min(current_24_min),
-        .input_hour(current_24_hour),
-        .alarm_time_sec(alarm_time_sec),
-        .alarm_time_min(alarm_time_min),
-        .alarm_time_hour(alarm_time_hour),
-        .alarm_sound(alarm_sound)
+        .timer_buzzer(timer_buzzer),
+        .alarm_buzzer(alarm_buzzer)
     );
 
     // Clock generation
@@ -139,7 +118,7 @@ module digital_clock_tb;
             display_hours = display_hour;
         end
 
-        if (AM_PM) begin
+        if (hour_format) begin
             if (is_pm)
                 am_pm_indicator = {"P", "M"};  // 'P' = 8'h50, 'M' = 8'h4D
             else
@@ -157,11 +136,12 @@ module digital_clock_tb;
         input_sec = 0;
         input_min = 0;
         input_hour = 0;
-        AM_PM = 0;
+        hour_format = 0;
         set_date = 0;
         input_day = 1;
         input_month = 1;
-        input_year = 2025;
+        input_year = 2020;
+        set_alarm = 0;
         set_timer = 0;
         start_timer = 0;
         stop_timer = 0;
@@ -191,10 +171,13 @@ module digital_clock_tb;
         input_year = 2025;
         #10; set_date = 0;
 
-        // Test 3: Set an alarm for 00:00:00
+        // Test 3: Set an alarm for 00:01:00
+        set_alarm = 1;
         alarm_time_sec = 0;
         alarm_time_min = 1;
         alarm_time_hour = 0;
+        #10;
+        set_alarm = 0;
 
         // Test 4: Set and start a 10-second timer
         #10;
@@ -230,7 +213,7 @@ module digital_clock_tb;
         #300;
 
         // Test 7: Switch to 12-hour format
-        AM_PM = 1;
+        hour_format = 1;
         #100;
 
         // Test 8: Set a new timer and let it complete
@@ -252,53 +235,23 @@ module digital_clock_tb;
         #100 $finish;
     end
 
-    /*
-    // Monitor outputs
-    initial begin
-        $monitor("Time: %3d | Clock: %02d:%02d:%02d | Display: %02d:%02d:%02d | Date: %02d/%02d/%4d | Timer: %02d:%02d (Running: %b, Done: %b) | Alarm: %b",
-            $time,
-            current_24_hour, current_24_min, current_24_sec,
-            display_hours, display_minutes, display_seconds,
-            current_day, current_month, current_year,
-            timer_min, timer_sec, timer_running, timer_done,
-            alarm_sound);
-    end
-
-    initial begin
-        $monitor("Time: %3d | Clock: %02d:%02d:%02d | Display: %02d:%02d:%02d | Date: %02d/%02d/%4d | Timer: %02d:%02d (Running: %b, Done: %b) | Alarm: %b\n set_time: %b | set_date: %b | set_timer: %b | start_timer: %b | stop_timer: %b | AM_PM: %b | input_sec: %d | input_min: %d | input_hour: %d | input_day: %d\ninput_month: %d | input_year: %d | timer_input_min: %d | timer_input_sec: %d | alarm_time_sec: %d | alarm_time_min: %d | alarm_time_hour: %d | reset: %b",
-            $time,
-            current_24_hour, current_24_min, current_24_sec,
-            display_hours, display_minutes, display_seconds,
-            current_day, current_month, current_year,
-            timer_min, timer_sec, timer_running, timer_done,
-            alarm_sound,
-            set_time, set_date, set_timer, start_timer, stop_timer, AM_PM,
-            input_sec, input_min, input_hour, input_day, input_month, input_year,
-            timer_input_min, timer_input_sec,
-            alarm_time_sec, alarm_time_min, alarm_time_hour,
-            reset);
-    end
-
-    */
-
-
+   // Monitor outputs
    initial begin
-       $monitor("Time: %3d | Clock: %02d:%02d:%02d | Display: %02d:%02d:%02d %c%c | Date: %02d/%02d/%4d\nTimer: %02d:%02d (Running: %b, Done: %b) | Alarm: %b\nControls: set_time=%b | set_date=%b | set_timer=%b | start=%b | stop=%b | AM_PM=%b | reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d,\nTimer: min=%d, sec=%d | Alarm: sec=%d, min=%d, hour=%d\n",
+       $monitor("Time: %3d | Clock: %02d:%02d:%02d | Display: %02d:%02d:%02d %c%c | Date: %02d/%02d/%4d\nTimer: %02d:%02d (Running: %b, Done: %b) | Alarm: %b\nControls: set_time=%b | set_date=%b | set_timer=%b | start=%b | stop=%b | hour_format=%b | reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d,\nTimer: min=%d, sec=%d | Alarm: sec=%d, min=%d, hour=%d\n",
            $time,
            current_24_hour, current_24_min, current_24_sec,
            display_hours, display_minutes, display_seconds,
            am_pm_indicator[15:8], am_pm_indicator[7:0],
            current_day, current_month, current_year,
-           timer_min, timer_sec, timer_running, timer_done,
-           alarm_sound,
-           set_time, set_date, set_timer, start_timer, stop_timer, AM_PM, reset,
+           timer_min, timer_sec, timer_running, timer_buzzer,
+           alarm_buzzer,
+           set_time, set_date, set_timer, start_timer, stop_timer, hour_format, reset,
            input_sec, input_min, input_hour, input_day, input_month, input_year,
            timer_input_min, timer_input_sec,
            alarm_time_sec, alarm_time_min, alarm_time_hour);
    end
 
    initial begin
-       // Check for syntax errors in the alarm_handler module
        $dumpfile("wave.vcd");
        $dumpvars(0, digital_clock_tb);
    end
