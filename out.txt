@@ -3,632 +3,301 @@ DISPLAY: 0x:0x:0x    | DATE: 01/01/2020
 Time:   0s | Clock: 00:00:00
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: x | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=1
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:00    | DATE: 01/01/2020
 Time:   1s | Clock: 00:00:00
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=1
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:00    | DATE: 01/01/2020
-Time:   1s | Clock: 00:00:00
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
+>>> [INFO] Restarting (reset deasserted) at time 1s
 DISPLAY: 00:00:00    | DATE: 01/01/2020
 Time:   2s | Clock: 00:00:01
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:01    | DATE: 01/01/2020
 Time:   3s | Clock: 00:00:02
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:02    | DATE: 01/01/2020
 Time:   4s | Clock: 00:00:03
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:03    | DATE: 01/01/2020
 Time:   5s | Clock: 00:00:04
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:04    | DATE: 01/01/2020
 Time:   6s | Clock: 00:00:05
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:05    | DATE: 01/01/2020
 Time:   7s | Clock: 00:00:06
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:06    | DATE: 01/01/2020
 Time:   8s | Clock: 00:00:07
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:07    | DATE: 01/01/2020
 Time:   9s | Clock: 00:00:08
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:08    | DATE: 01/01/2020
 Time:  10s | Clock: 00:00:09
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:09    | DATE: 01/01/2020
 Time:  11s | Clock: 00:00:10
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:10    | DATE: 01/01/2020
 Time:  12s | Clock: 00:00:11
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec=  0, min=  0, hour=  0, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:10    | DATE: 01/01/2020
-Time:  12s | Clock: 00:00:11
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=1, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
 DISPLAY: 00:00:11    | DATE: 01/01/2020
 Time:  13s | Clock: 23:59:57
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=1, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:11    | DATE: 01/01/2020
-Time:  13s | Clock: 23:59:57
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
+
+>>> [INFO] Time set to 23:59:57 at time 13s
 DISPLAY: 23:59:57    | DATE: 01/01/2020
 Time:  14s | Clock: 23:59:58
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 23:59:58    | DATE: 01/01/2020
+
+DISPLAY: 23:59:58    | DATE: 28/02/2020
 Time:  15s | Clock: 23:59:59
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 23:59:59    | DATE: 02/01/2020
+
+>>> [INFO] Date set to 28/02/2020 at time 15s
+DISPLAY: 23:59:59    | DATE: 29/02/2020
 Time:  16s | Clock: 00:00:00
 Timer: 00:00 (Running: 0, Done: 0)
 Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day=  1, month=  1, year= 2020
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 23:59:59    | DATE: 02/01/2020
+
+DISPLAY: 23:59:59    | DATE: 29/02/2020
 Time:  16s | Clock: 00:00:00
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=1, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:00    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:00    | DATE: 29/02/2020
 Time:  17s | Clock: 00:00:01
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=1, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:00    | DATE: 31/12/2025
-Time:  17s | Clock: 00:00:01
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=1, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:01    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Alarm set to 00:00:04 at time 17s
+DISPLAY: 00:00:01    | DATE: 29/02/2020
 Time:  18s | Clock: 00:00:02
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:00 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=1, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:01    | DATE: 31/12/2025
-Time:  18s | Clock: 00:00:02
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=1, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:02    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:02    | DATE: 29/02/2020
 Time:  19s | Clock: 00:00:03
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=1, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:02    | DATE: 31/12/2025
-Time:  19s | Clock: 00:00:03
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:03    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:03    | DATE: 29/02/2020
 Time:  20s | Clock: 00:00:04
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:04    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:04    | DATE: 29/02/2020
 Time:  21s | Clock: 00:00:05
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:05    | DATE: 31/12/2025
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:05    | DATE: 29/02/2020
 Time:  22s | Clock: 00:00:06
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:06    | DATE: 31/12/2025
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Alarm snoozed at time 22s
+DISPLAY: 00:00:05    | DATE: 29/02/2020
+Time:  22s | Clock: 00:00:06
+Timer: 00:00 (Running: 0, Done: 0)
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 1 | Stop Alarm = 0
+
+DISPLAY: 00:00:06    | DATE: 29/02/2020
 Time:  23s | Clock: 00:00:07
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:07    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 1 | Stop Alarm = 0
+
+DISPLAY: 00:00:06    | DATE: 29/02/2020
+Time:  23s | Clock: 00:00:07
+Timer: 00:00 (Running: 0, Done: 0)
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:07    | DATE: 29/02/2020
 Time:  24s | Clock: 00:00:08
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 1 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:07    | DATE: 31/12/2025
-Time:  24s | Clock: 00:00:08
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 1 | Alarm: 00:00:07 | Snooze = 1 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:08    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:08    | DATE: 29/02/2020
 Time:  25s | Clock: 00:00:09
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 1 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:08    | DATE: 31/12/2025
-Time:  25s | Clock: 00:00:09
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:09    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:09    | DATE: 29/02/2020
 Time:  26s | Clock: 00:00:10
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:10    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:10    | DATE: 29/02/2020
 Time:  27s | Clock: 00:00:11
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:11    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Alarm stopped at time 27s
+DISPLAY: 00:00:10    | DATE: 29/02/2020
+Time:  27s | Clock: 00:00:11
+Timer: 00:00 (Running: 0, Done: 0)
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 1
+
+DISPLAY: 00:00:11    | DATE: 29/02/2020
 Time:  28s | Clock: 00:00:12
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:12    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 1
+
+DISPLAY: 00:00:11    | DATE: 29/02/2020
+Time:  28s | Clock: 00:00:12
+Timer: 00:00 (Running: 0, Done: 0)
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:12    | DATE: 29/02/2020
 Time:  29s | Clock: 00:00:13
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:13    | DATE: 31/12/2025
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:13    | DATE: 29/02/2020
 Time:  30s | Clock: 00:00:14
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:14    | DATE: 31/12/2025
+Timer: 00:10 (Running: 0, Done: 0)
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Timer set to 00:10 at time 30s
+DISPLAY: 00:00:14    | DATE: 29/02/2020
 Time:  31s | Clock: 00:00:15
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 1 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:15    | DATE: 31/12/2025
+Timer: 00:10 (Running: 0, Done: 0)
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Timer started at time 31s
+DISPLAY: 00:00:15    | DATE: 29/02/2020
 Time:  32s | Clock: 00:00:16
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 1 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:15    | DATE: 31/12/2025
-Time:  32s | Clock: 00:00:16
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 1 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 1
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:16    | DATE: 31/12/2025
-Time:  33s | Clock: 00:00:17
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 1
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:16    | DATE: 31/12/2025
-Time:  33s | Clock: 00:00:17
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:17    | DATE: 31/12/2025
-Time:  34s | Clock: 00:00:18
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec=  0
- 
-DISPLAY: 00:00:17    | DATE: 31/12/2025
-Time:  34s | Clock: 00:00:18
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=1, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:18    | DATE: 31/12/2025
-Time:  35s | Clock: 00:00:19
-Timer: 00:10 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=1, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:18    | DATE: 31/12/2025
-Time:  35s | Clock: 00:00:19
-Timer: 00:10 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:19    | DATE: 31/12/2025
-Time:  36s | Clock: 00:00:20
-Timer: 00:10 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:19    | DATE: 31/12/2025
-Time:  36s | Clock: 00:00:20
-Timer: 00:10 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:20    | DATE: 31/12/2025
-Time:  37s | Clock: 00:00:21
 Timer: 00:10 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:10    | DATE: 31/12/2025
-Time:  38s | Clock: 00:00:22
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:10    | DATE: 29/02/2020
+Time:  33s | Clock: 00:00:17
 Timer: 00:09 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:09    | DATE: 31/12/2025
-Time:  39s | Clock: 00:00:23
+Alarm Buzzer: 0 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:09    | DATE: 29/02/2020
+Time:  34s | Clock: 00:00:18
 Timer: 00:08 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:08    | DATE: 31/12/2025
-Time:  40s | Clock: 00:00:24
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:08    | DATE: 29/02/2020
+Time:  35s | Clock: 00:00:19
 Timer: 00:07 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:07    | DATE: 31/12/2025
-Time:  41s | Clock: 00:00:25
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:07    | DATE: 29/02/2020
+Time:  36s | Clock: 00:00:20
 Timer: 00:06 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:06    | DATE: 31/12/2025
-Time:  42s | Clock: 00:00:26
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:06    | DATE: 29/02/2020
+Time:  37s | Clock: 00:00:21
 Timer: 00:05 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:05    | DATE: 31/12/2025
-Time:  43s | Clock: 00:00:27
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:05    | DATE: 29/02/2020
+Time:  38s | Clock: 00:00:22
 Timer: 00:04 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:04    | DATE: 31/12/2025
-Time:  44s | Clock: 00:00:28
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:04    | DATE: 29/02/2020
+Time:  39s | Clock: 00:00:23
 Timer: 00:03 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:03    | DATE: 31/12/2025
-Time:  45s | Clock: 00:00:29
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:03    | DATE: 29/02/2020
+Time:  40s | Clock: 00:00:24
 Timer: 00:02 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:02    | DATE: 31/12/2025
-Time:  46s | Clock: 00:00:30
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:02    | DATE: 29/02/2020
+Time:  41s | Clock: 00:00:25
 Timer: 00:01 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:01    | DATE: 31/12/2025
-Time:  47s | Clock: 00:00:31
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:01    | DATE: 29/02/2020
+Time:  42s | Clock: 00:00:26
 Timer: 00:00 (Running: 1, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:00    | DATE: 31/12/2025
-Time:  48s | Clock: 00:00:32
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:00    | DATE: 29/02/2020
+Time:  43s | Clock: 00:00:27
 Timer: 00:00 (Running: 0, Done: 1)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=1, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:00    | DATE: 31/12/2025
-Time:  48s | Clock: 00:00:32
-Timer: 00:00 (Running: 0, Done: 1)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:32    | DATE: 31/12/2025
-Time:  49s | Clock: 00:00:33
-Timer: 00:00 (Running: 0, Done: 1)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:32    | DATE: 31/12/2025
-Time:  49s | Clock: 00:00:33
-Timer: 00:00 (Running: 0, Done: 1)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=1, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:33    | DATE: 31/12/2025
-Time:  50s | Clock: 00:00:34
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Timer stopped at time 43s
+DISPLAY: 00:00:27    | DATE: 29/02/2020
+Time:  44s | Clock: 00:00:28
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=1, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:33    | DATE: 31/12/2025
-Time:  50s | Clock: 00:00:34
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:28    | DATE: 29/02/2020
+Time:  45s | Clock: 00:00:29
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:34    | DATE: 31/12/2025
-Time:  51s | Clock: 00:00:35
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:29    | DATE: 29/02/2020
+Time:  46s | Clock: 23:59:58
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 57, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:34    | DATE: 31/12/2025
-Time:  51s | Clock: 00:00:35
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Time set to 23:59:58 (near midnight) at time 46s
+DISPLAY: 23:59:58    | DATE: 29/02/2020
+Time:  47s | Clock: 23:59:59
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=1, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:35    | DATE: 31/12/2025
-Time:  52s | Clock: 23:59:58
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 23:59:59    | DATE: 01/03/2020
+Time:  48s | Clock: 00:00:00
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=1, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:35    | DATE: 31/12/2025
-Time:  52s | Clock: 23:59:58
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:00    | DATE: 01/03/2020
+Time:  49s | Clock: 00:00:01
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 23:59:58    | DATE: 31/12/2025
-Time:  53s | Clock: 23:59:59
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 00:00:01    | DATE: 01/03/2020
+Time:  50s | Clock: 00:00:02
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 23:59:59    | DATE: 01/01/2026
-Time:  54s | Clock: 00:00:00
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+>>> [INFO] Switched to 12-hour format at time 50s
+DISPLAY: 00:00:01 AM | DATE: 01/03/2020
+Time:  50s | Clock: 00:00:02
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:00    | DATE: 01/01/2026
-Time:  55s | Clock: 00:00:01
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+DISPLAY: 12:00:02 AM | DATE: 01/03/2020
+Time:  51s | Clock: 00:00:03
 Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:01    | DATE: 01/01/2026
-Time:  56s | Clock: 00:00:02
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:02    | DATE: 01/01/2026
-Time:  57s | Clock: 00:00:03
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=0, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 00:00:02 AM | DATE: 01/01/2026
-Time:  57s | Clock: 00:00:03
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=1, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-DISPLAY: 12:00:03 AM | DATE: 01/01/2026
-Time:  58s | Clock: 00:00:04
-Timer: 00:00 (Running: 0, Done: 0)
-Alarm Buzzer: 0 | Alarm: 00:00:07 | Snooze = 0 | Stop Alarm = 0
-Controls: set_time=0, set_date=0, set_timer=0, start_timer=0, stop_timer=0, set_alarm=0, hour_format=1, reset=0
-Inputs: sec= 58, min= 59, hour= 23, day= 31, month= 12, year= 2025
-Timer Inputs: min=  0, sec= 10
- 
-main_tb.v:210: $finish called at 58000 (1ms)
+Alarm Buzzer: 1 | Alarm: 00:00:04 | Snooze = 0 | Stop Alarm = 0
+
+main_tb.v:223: $finish called at 51000 (1ms)

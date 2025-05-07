@@ -346,7 +346,8 @@ module main_driver (
     output [7:0] timer_sec,
     output       timer_running,
     output       timer_buzzer,
-    output       alarm_buzzer
+    output       alarm_buzzer,
+    output       is_pm
 );
     // Instantiate the clock_handler module
     clock_handler clock_module (
@@ -422,5 +423,4 @@ module main_driver (
         .alarm_input_hour(alarm_input_hour),
         .alarm_buzzer(alarm_buzzer)
     );
-
 endmodule

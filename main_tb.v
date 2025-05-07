@@ -96,7 +96,8 @@ module digital_clock_tb;
         .timer_sec(timer_sec),
         .timer_running(timer_running),
         .timer_buzzer(timer_buzzer),
-        .alarm_buzzer(alarm_buzzer)
+        .alarm_buzzer(alarm_buzzer),
+        .is_pm(is_pm)
     );
 
     // Clock generation
@@ -144,6 +145,7 @@ module digital_clock_tb;
 
         // Apply reset for 1s
         #1 reset = 0;
+        $display(">>> [INFO] Restarting (reset deasserted) at time %0ds", $time);
 
         // Test 1: Set the time to 23:59:57
         #11;
@@ -153,27 +155,33 @@ module digital_clock_tb;
         input_hour = 23;
         #1;
         set_time = 0;
+        $display(">>> [INFO] Time set to %02d:%02d:%02d at time %0ds", input_hour, input_min, input_sec, $time);
 
-        // Test 2: Set the date to December 31, 2025
-        #3;
+        // Test 2: Set the date to Feb 28, 2020 (leap year)
+        #1;
         set_date = 1;
-        input_day = 31;
-        input_month = 12;
-        input_year = 2025;
-        #1; set_date = 0;
+        input_day = 28;
+        input_month = 2;
+        input_year = 2020;
+        #1;
+        set_date = 0;
+        $display(">>> [INFO] Date set to %02d/%02d/%4d at time %0ds", input_day, input_month, input_year, $time);
 
-        // Test 3: Set an alarm for 00:00:07
+        // Test 3: Set an alarm for 00:00:04
         set_alarm = 1;
         #1;
-        alarm_input_sec = 7;
+        alarm_input_sec = 4;
         alarm_input_min = 0;
         alarm_input_hour = 0;
         #1;
         set_alarm = 0;
+        $display(">>> [INFO] Alarm set to %02d:%02d:%02d at time %0ds", alarm_input_hour, alarm_input_min, alarm_input_sec, $time);
 
         #5 snooze_alarm = 1;
+        $display(">>> [INFO] Alarm snoozed at time %0ds", $time);
         #1 snooze_alarm = 0;
-        #7 stop_alarm = 1;
+        #4 stop_alarm = 1;
+        $display(">>> [INFO] Alarm stopped at time %0ds", $time);
         #1 stop_alarm = 0;
 
         // Test 4: Set and start a 10-second timer
@@ -183,12 +191,15 @@ module digital_clock_tb;
         timer_input_sec = 10;
         #1;
         set_timer = 0;
+        $display(">>> [INFO] Timer set to %02d:%02d at time %0ds", timer_input_min, timer_input_sec, $time);
         #1;
         start_timer = 1;
-        #12;
+        $display(">>> [INFO] Timer started at time %0ds", $time);
+        #11;
         start_timer = 0;
         #1;
         stop_timer = 1;
+        $display(">>> [INFO] Timer stopped at time %0ds", $time);
         #1;
         stop_timer = 0;
 
@@ -201,28 +212,41 @@ module digital_clock_tb;
         input_hour = 23;
         #1;
         set_time = 0;
-        #5;
+        $display(">>> [INFO] Time set to %02d:%02d:%02d (near midnight) at time %0ds", input_hour, input_min, input_sec, $time);
+        #4;
 
         // Test 7: Switch to 12-hour format
         hour_format = 1;
+        $display(">>> [INFO] Switched to 12-hour format at time %0ds", $time);
 
         // End simulation
         #1 $finish;
+        $display(">>> [INFO] Simulation finished at time %0ds", $time);
     end
 
    // Monitor outputs
    initial begin
-       $monitor("DISPLAY: %02d:%02d:%02d %c%c | DATE: %02d/%02d/%4d\nTime: %3ds | Clock: %02d:%02d:%02d\nTimer: %02d:%02d (Running: %b, Done: %b)\nAlarm Buzzer: %0d | Alarm: %02d:%02d:%02d | Snooze = %0d | Stop Alarm = %0d\nControls: set_time=%b, set_date=%b, set_timer=%b, start_timer=%b, stop_timer=%b, set_alarm=%b, hour_format=%b, reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d\nTimer Inputs: min=%d, sec=%d\n",
+       // $monitor("DISPLAY: %02d:%02d:%02d %c%c | DATE: %02d/%02d/%4d\nTime: %3ds | Clock: %02d:%02d:%02d\nTimer: %02d:%02d (Running: %b, Done: %b)\nAlarm Buzzer: %0d | Alarm: %02d:%02d:%02d | Snooze = %0d | Stop Alarm = %0d\nControls: set_time=%b, set_date=%b, set_timer=%b, start_timer=%b, stop_timer=%b, set_alarm=%b, hour_format=%b, reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d\nTimer Inputs: min=%d, sec=%d\n",
+       //     display_hour, display_min, display_sec,
+       //     am_pm_indicator[15:8], am_pm_indicator[7:0],
+       //     current_day, current_month, current_year,
+       //     $time,
+       //     current_24_hour, current_24_min, current_24_sec,
+       //     timer_min, timer_sec, timer_running, timer_buzzer,
+       //     alarm_buzzer, alarm_input_hour, alarm_input_min, alarm_input_sec, snooze_alarm, stop_alarm,
+       //     set_time, set_date, set_timer, start_timer, stop_timer, set_alarm, hour_format, reset,
+       //     input_sec, input_min, input_hour, input_day, input_month, input_year,
+       //     timer_input_min, timer_input_sec,);
+
+       $monitor("DISPLAY: %02d:%02d:%02d %c%c | DATE: %02d/%02d/%4d\nTime: %3ds | Clock: %02d:%02d:%02d\nTimer: %02d:%02d (Running: %b, Done: %b)\nAlarm Buzzer: %0d | Alarm: %02d:%02d:%02d | Snooze = %0d | Stop Alarm = %0d\n",
            display_hour, display_min, display_sec,
            am_pm_indicator[15:8], am_pm_indicator[7:0],
            current_day, current_month, current_year,
            $time,
            current_24_hour, current_24_min, current_24_sec,
            timer_min, timer_sec, timer_running, timer_buzzer,
-           alarm_buzzer, alarm_input_hour, alarm_input_min, alarm_input_sec, snooze_alarm, stop_alarm,
-           set_time, set_date, set_timer, start_timer, stop_timer, set_alarm, hour_format, reset,
-           input_sec, input_min, input_hour, input_day, input_month, input_year,
-           timer_input_min, timer_input_sec,);
+           alarm_buzzer, alarm_input_hour, alarm_input_min, alarm_input_sec, snooze_alarm, stop_alarm);
+
    end
 
    initial begin
@@ -231,3 +255,4 @@ module digital_clock_tb;
    end
 
 endmodule
+
