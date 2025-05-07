@@ -1,0 +1,29 @@
+
+=== T-Junction Traffic Light Controller Simulation Started ===
+
+Time: 0 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+=== Reset at t=1 ===
+Time: 32 | T1: YELLOW | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 37 | T1: RED    | T2: RED    | T1_WALK = 1 | T2_WALK = 1 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 57 | T1: RED    | T2: RED    | T1_WALK = 1 | T2_WALK = 1 | Buzzer = 1 | E_Left = 0 | E_Right = 0
+Time: 62 | T1: RED    | T2: GREEN  | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 92 | T1: RED    | T2: YELLOW | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 97 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 127 | T1: YELLOW | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 132 | T1: RED    | T2: RED    | T1_WALK = 1 | T2_WALK = 1 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 152 | T1: RED    | T2: RED    | T1_WALK = 1 | T2_WALK = 1 | Buzzer = 1 | E_Left = 0 | E_Right = 0
+Time: 157 | T1: RED    | T2: GREEN  | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 187 | T1: RED    | T2: YELLOW | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 192 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 201 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 1 | E_Right = 0
+Time: 202 | T1: RED    | T2: GREEN  | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 1 | E_Right = 0
+Time: 213 | T1: RED    | T2: GREEN  | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 214 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 233 | T1: GREEN  | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 1
+Time: 234 | T1: RED    | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 1
+Time: 245 | T1: RED    | T2: RED    | T1_WALK = 0 | T2_WALK = 0 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+Time: 246 | T1: RED    | T2: RED    | T1_WALK = 1 | T2_WALK = 1 | Buzzer = 0 | E_Left = 0 | E_Right = 0
+
+=== Simulation Complete ===
+
+main_tb.v:87: $finish called at 265000 (1ms)

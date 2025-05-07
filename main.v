@@ -16,7 +16,7 @@ module clock_handler (
     output reg is_pm
 );
 
-// synchronous time set
+// synchronous time set and update
 always @(posedge clk or posedge reset) begin
     if (reset) begin
         current_24_sec  <= 0;
@@ -159,21 +159,38 @@ module alarm_handler (
     input [7:0] alarm_time_min,
     input [7:0] alarm_time_hour,
 
+    input snooze_alarm,
+    input stop_alarm,
+
     output reg alarm_buzzer
 );
     reg [7:0] input_sec_internal;
     reg [7:0] input_min_internal;
     reg [7:0] input_hour_internal;
+    reg is_buzzing;
+    reg is_snoozed;
+    reg [9:0] counter;
 
 always @(posedge clk) begin
+
+    (snooze_alarm) begin
+        is_snoozed <= 1;
+        is_buzzing <= 0;
+    end
+
     if(set_alarm) begin
         input_sec_internal <= input_sec;
         input_min_internal <= input_min;
         input_hour_internal <= input_hour;
         alarm_buzzer <= 1;
+        counter <= 0;
     end
 
-    if (input_sec_internal == alarm_time_sec && input_min_internal == alarm_time_min && input_hour_internal == alarm_time_hour) begin
+    if(is_snoozed)begin
+        counter <= counter + 1;
+        if(counter > 300) is_snoozed <= 0; 
+    end else if ((input_sec_internal == alarm_time_sec && input_min_internal == alarm_time_min && input_hour_internal == alarm_time_hour) | is_buzzing) begin
+        if(!is_buzzing) is_buzzing <= 1;
         alarm_buzzer <= 1;
     end else begin
         alarm_buzzer <= 0;
@@ -196,7 +213,6 @@ module timer_handler (
     output reg timer_running,
     output reg timer_buzzer
 );
-
 
 reg [7:0] max_min = 8'd10;
 
