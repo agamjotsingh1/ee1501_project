@@ -1,7 +1,6 @@
 module clock_handler (
     input clk,
     input reset,
-    input hour_format, // 1 for 12 hour, 0 for 24 hour format
     input set_time,
     input [7:0] input_sec,
     input [7:0] input_min,
@@ -9,11 +8,7 @@ module clock_handler (
 
     output reg [7:0] current_24_sec,
     output reg [7:0] current_24_min,
-    output reg [7:0] current_24_hour,
-    output reg [7:0] display_sec,
-    output reg [7:0] display_min,
-    output reg [7:0] display_hour,
-    output reg is_pm
+    output reg [7:0] current_24_hour
 );
 
 // synchronous time set and update
@@ -45,29 +40,56 @@ always @(posedge clk or posedge reset) begin
     end
 end
 
+endmodule
+
+module display_handler (
+    input clk,
+    input hour_format, // 1 for 12 hour, 0 for 24 hour format
+    input timer_running,
+
+    input [7:0] current_24_sec,
+    input [7:0] current_24_min,
+    input [7:0] current_24_hour,
+
+    input [7:0] timer_min,
+    input [7:0] timer_sec,
+
+    output reg [7:0] display_sec,
+    output reg [7:0] display_min,
+    output reg [7:0] display_hour,
+    output reg is_pm
+);
+
 // Display time in 12-hour or 24-hour format
-always @(*) begin
-    display_sec <= current_24_sec;
-    display_min <= current_24_min;
+always @(posedge clk) begin
+    if(timer_running) begin
+        display_sec <= timer_sec;
+        display_min <= timer_min;
+        display_hour <= 8'd0;
 
-    if (hour_format == 1'b1) begin  // 12-hour format
-        if (current_24_hour == 0) begin
-            display_hour <= 8'd12;  // 12 AM (midnight)
-        end else if (current_24_hour == 12) begin
-            display_hour <= 8'd12;  // 12 PM (noon)
-        end else if (current_24_hour > 12) begin
-            display_hour <= current_24_hour - 12;  // PM hours
-        end else begin
-            display_hour <= current_24_hour;  // AM hours
-        end
-    end else begin  // 24-hour format
-        display_hour <= current_24_hour;
-    end
-
-    if (hour_format == 1'b1) begin  // 12-hour format
-        is_pm <= (current_24_hour >= 12) ? 1'b1 : 1'b0;
     end else begin
-        is_pm <= 1'b0;  // Don't care in 24-hour mode
+        display_sec <= current_24_sec;
+        display_min <= current_24_min;
+
+        if (hour_format == 1'b1) begin  // 12-hour format
+            if (current_24_hour == 0) begin
+                display_hour <= 8'd12;  // 12 AM (midnight)
+            end else if (current_24_hour == 12) begin
+                display_hour <= 8'd12;  // 12 PM (noon)
+            end else if (current_24_hour > 12) begin
+                display_hour <= current_24_hour - 12;  // PM hours
+            end else begin
+                display_hour <= current_24_hour;  // AM hours
+            end
+        end else begin  // 24-hour format
+            display_hour <= current_24_hour;
+        end
+
+        if (hour_format == 1'b1) begin  // 12-hour format
+            is_pm <= (current_24_hour >= 12) ? 1'b1 : 1'b0;
+        end else begin
+            is_pm <= 1'b0;  // Don't care in 24-hour mode
+        end
     end
 end
 
@@ -151,13 +173,13 @@ module alarm_handler (
     input clk,
     input set_alarm,
 
-    input [7:0] input_sec,
-    input [7:0] input_min,
-    input [7:0] input_hour,
+    input [7:0] current_24_sec,
+    input [7:0] current_24_min,
+    input [7:0] current_24_hour,
 
-    input [7:0] alarm_time_sec,
-    input [7:0] alarm_time_min,
-    input [7:0] alarm_time_hour,
+    input [7:0] alarm_input_sec,
+    input [7:0] alarm_input_min,
+    input [7:0] alarm_input_hour,
 
     input snooze_alarm,
     input stop_alarm,
@@ -168,47 +190,50 @@ module alarm_handler (
     reg [7:0] input_min_internal;
     reg [7:0] input_hour_internal;
     reg [9:0] counter;
-    reg is_buzzing;
     reg is_snoozed;
+    reg is_buzzing;
 
 always @(posedge clk) begin
     // Stop alarm functionality
     if(stop_alarm) begin
         is_buzzing <= 0;
         alarm_buzzer <= 0;
+        counter <= 0;
     end
     // Snooze alarm functionality
     else if(snooze_alarm) begin
         is_snoozed <= 1;
-        is_buzzing <= 0;
         alarm_buzzer <= 0;
+        is_buzzing <= 0;
         counter <= 0;
     end
     // Set alarm functionality
     else if(set_alarm) begin
-        input_sec_internal <= input_sec;
-        input_min_internal <= input_min;
-        input_hour_internal <= input_hour;
-        is_buzzing <= 0;
+        input_sec_internal <= alarm_input_sec;
+        input_min_internal <= alarm_input_min;
+        input_hour_internal <= alarm_input_hour;
         is_snoozed <= 0;
         alarm_buzzer <= 0;
+        is_buzzing <= 0;
         counter <= 0;
     end
     // Snooze timer functionality
     else if(is_snoozed) begin
+        alarm_buzzer <= 0;
+        is_buzzing <= 0;
         counter <= counter + 1;
-        if(counter >= 300) begin  // After snooze period (300 clock cycles)
+        if(counter >= 5) begin  // After snooze period (300 clock cycles)
             is_snoozed <= 0;
+            alarm_buzzer <= 1;
+            is_buzzing <= 1;
             counter <= 0;
         end
     end
     // Alarm matching current time
-    else if ((input_sec_internal == alarm_time_sec && 
-              input_min_internal == alarm_time_min && 
-              input_hour_internal == alarm_time_hour) || is_buzzing) begin
-        if(!is_buzzing) begin
-            is_buzzing <= 1;
-        end
+    else if ((input_sec_internal == current_24_sec &&
+              input_min_internal == current_24_min &&
+              input_hour_internal == current_24_hour) || is_buzzing) begin
+        if(!is_buzzing) is_buzzing <= 1;
         alarm_buzzer <= 1;
     end
     // Default state - alarm not active
@@ -259,6 +284,7 @@ always @(posedge clk or posedge reset) begin
     end else if (stop_timer) begin
         // Stop the timer
         timer_running <= 1'b0;
+        timer_buzzer <= 1'b0;
     end
 
     if (timer_running) begin
@@ -303,9 +329,9 @@ module main_driver (
     input [15:0] input_year,
     input  [7:0] timer_input_min,
     input  [7:0] timer_input_sec,
-    input  [7:0] alarm_time_sec,
-    input  [7:0] alarm_time_min,
-    input  [7:0] alarm_time_hour,
+    input  [7:0] alarm_input_sec,
+    input  [7:0] alarm_input_min,
+    input  [7:0] alarm_input_hour,
 
     output [7:0] current_24_sec,
     output [7:0] current_24_min,
@@ -326,14 +352,25 @@ module main_driver (
     clock_handler clock_module (
         .clk(clk),
         .reset(reset),
-        .hour_format(hour_format),
         .set_time(set_time),
         .input_sec(input_sec),
         .input_min(input_min),
         .input_hour(input_hour),
         .current_24_sec(current_24_sec),
         .current_24_min(current_24_min),
+        .current_24_hour(current_24_hour)
+    );
+
+    // Instantiate the display_handler module
+    display_handler display_module (
+        .clk(clk),
+        .hour_format(hour_format),
+        .current_24_sec(current_24_sec),
+        .current_24_min(current_24_min),
         .current_24_hour(current_24_hour),
+        .timer_min(timer_min),
+        .timer_sec(timer_sec),
+        .timer_running(timer_running),
         .display_sec(display_sec),
         .display_min(display_min),
         .display_hour(display_hour),
@@ -377,12 +414,12 @@ module main_driver (
         .set_alarm(set_alarm),
         .snooze_alarm(snooze_alarm),
         .stop_alarm(stop_alarm),
-        .input_sec(current_24_sec),
-        .input_min(current_24_min),
-        .input_hour(current_24_hour),
-        .alarm_time_sec(alarm_time_sec),
-        .alarm_time_min(alarm_time_min),
-        .alarm_time_hour(alarm_time_hour),
+        .current_24_hour(current_24_hour),
+        .current_24_min(current_24_min),
+        .current_24_sec(current_24_sec),
+        .alarm_input_sec(alarm_input_sec),
+        .alarm_input_min(alarm_input_min),
+        .alarm_input_hour(alarm_input_hour),
         .alarm_buzzer(alarm_buzzer)
     );
 
