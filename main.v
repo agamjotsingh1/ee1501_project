@@ -167,32 +167,52 @@ module alarm_handler (
     reg [7:0] input_sec_internal;
     reg [7:0] input_min_internal;
     reg [7:0] input_hour_internal;
+    reg [9:0] counter;
     reg is_buzzing;
     reg is_snoozed;
-    reg [9:0] counter;
 
 always @(posedge clk) begin
-
-    (snooze_alarm) begin
+    // Stop alarm functionality
+    if(stop_alarm) begin
+        is_buzzing <= 0;
+        alarm_buzzer <= 0;
+    end
+    // Snooze alarm functionality
+    else if(snooze_alarm) begin
         is_snoozed <= 1;
         is_buzzing <= 0;
+        alarm_buzzer <= 0;
+        counter <= 0;
     end
-
-    if(set_alarm) begin
+    // Set alarm functionality
+    else if(set_alarm) begin
         input_sec_internal <= input_sec;
         input_min_internal <= input_min;
         input_hour_internal <= input_hour;
-        alarm_buzzer <= 1;
+        is_buzzing <= 0;
+        is_snoozed <= 0;
+        alarm_buzzer <= 0;
         counter <= 0;
     end
-
-    if(is_snoozed)begin
+    // Snooze timer functionality
+    else if(is_snoozed) begin
         counter <= counter + 1;
-        if(counter > 300) is_snoozed <= 0; 
-    end else if ((input_sec_internal == alarm_time_sec && input_min_internal == alarm_time_min && input_hour_internal == alarm_time_hour) | is_buzzing) begin
-        if(!is_buzzing) is_buzzing <= 1;
+        if(counter >= 300) begin  // After snooze period (300 clock cycles)
+            is_snoozed <= 0;
+            counter <= 0;
+        end
+    end
+    // Alarm matching current time
+    else if ((input_sec_internal == alarm_time_sec && 
+              input_min_internal == alarm_time_min && 
+              input_hour_internal == alarm_time_hour) || is_buzzing) begin
+        if(!is_buzzing) begin
+            is_buzzing <= 1;
+        end
         alarm_buzzer <= 1;
-    end else begin
+    end
+    // Default state - alarm not active
+    else begin
         alarm_buzzer <= 0;
     end
 end
@@ -269,6 +289,8 @@ module main_driver (
     input        set_time,
     input        set_date,
     input        set_alarm,
+    input        snooze_alarm,
+    input        stop_alarm,
     input        set_timer,
     input        start_timer,
     input        stop_timer,
@@ -353,6 +375,8 @@ module main_driver (
     alarm_handler alarm_module (
         .clk(clk),
         .set_alarm(set_alarm),
+        .snooze_alarm(snooze_alarm),
+        .stop_alarm(stop_alarm),
         .input_sec(current_24_sec),
         .input_min(current_24_min),
         .input_hour(current_24_hour),

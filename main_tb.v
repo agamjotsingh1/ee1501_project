@@ -27,6 +27,8 @@ module digital_clock_tb;
 
     // Alarm control signals
     reg set_alarm;
+    reg snooze_alarm;
+    reg stop_alarm;
     reg [7:0] alarm_time_sec;
     reg [7:0] alarm_time_min;
     reg [7:0] alarm_time_hour;
@@ -70,6 +72,8 @@ module digital_clock_tb;
         .set_time(set_time),
         .set_date(set_date),
         .set_alarm(set_alarm),
+        .snooze_alarm(snooze_alarm),
+        .stop_alarm(stop_alarm),
         .set_timer(set_timer),
         .start_timer(start_timer),
         .stop_timer(stop_timer),
@@ -150,6 +154,8 @@ module digital_clock_tb;
         alarm_time_sec = 0;
         alarm_time_min = 0;
         alarm_time_hour = 0;
+        snooze_alarm = 0;
+        stop_alarm = 0;
 
         // Apply reset for 20ns
         #20 reset = 0;
@@ -237,18 +243,18 @@ module digital_clock_tb;
 
    // Monitor outputs
    initial begin
-       $monitor("Time: %3d | Clock: %02d:%02d:%02d | Display: %02d:%02d:%02d %c%c | Date: %02d/%02d/%4d\nTimer: %02d:%02d (Running: %b, Done: %b) | Alarm: %b\nControls: set_time=%b | set_date=%b | set_timer=%b | start=%b | stop=%b | hour_format=%b | reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d,\nTimer: min=%d, sec=%d | Alarm: sec=%d, min=%d, hour=%d\n",
-           $time,
-           current_24_hour, current_24_min, current_24_sec,
+       $monitor("DISPLAY: %02d:%02d:%02d %c%c | DATE: %02d/%02d/%4d\nTime: %3ds | Clock: %02d:%02d:%02d\nTimer: %02d:%02d (Running: %b, Done: %b)\nAlarm Buzzer: %0d | Alarm: sec=%d, min=%d, hour=%d\nControls: set_time=%b | set_date=%b | set_timer=%b | start=%b | stop=%b | hour_format=%b | reset=%b\nInputs: sec=%d, min=%d, hour=%d, day=%d, month=%d, year=%d\nTimer Inputs: min=%d, sec=%d\nAlarm Inputs: snooze=%d, stop=%d\n",
            display_hours, display_minutes, display_seconds,
            am_pm_indicator[15:8], am_pm_indicator[7:0],
            current_day, current_month, current_year,
+           $time,
+           current_24_hour, current_24_min, current_24_sec,
            timer_min, timer_sec, timer_running, timer_buzzer,
-           alarm_buzzer,
+           alarm_buzzer, alarm_time_sec, alarm_time_min, alarm_time_hour,
            set_time, set_date, set_timer, start_timer, stop_timer, hour_format, reset,
            input_sec, input_min, input_hour, input_day, input_month, input_year,
            timer_input_min, timer_input_sec,
-           alarm_time_sec, alarm_time_min, alarm_time_hour);
+           snooze_alarm, stop_alarm);
    end
 
    initial begin
